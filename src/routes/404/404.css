@@ -1,0 +1,70 @@
+
+.app__404-content {
+    border-radius: 40px;
+    margin: 0 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.app__404-content .-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.app__404-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.app__404-content .-text {
+    padding: 2rem ;
+    position: relative;
+    z-index: 102;
+}
+
+.app__404-content h1 {
+    font-size: 12rem;
+    line-height: 100%;
+}
+
+.app__404-content h1 span {
+    color: var(--primary);
+}
+.app__404-content h1 span.-light {
+    color: var(--white);
+}
+
+.app__404-content h3 {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.app__404-content a {
+    border: 1px solid var(--primary);
+    border-radius: var(--br-1);
+    color: var(--white);
+    display: inline-block;
+    font-weight: 600;
+    margin-top: var(--spacing-lg);
+    padding: .85rem 2rem;
+    transition: all .25s ease-in-out;
+}
+
+.app__404-content a:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+@media screen and (max-width: 824px) {
+    .app__404-content {
+        border-radius: 16px;
+    }
+    
+    .app__404-content h1 {
+        font-size: 6rem;
+    }
+    .app__404-content h3 {
+        font-size: 1.5rem;
+    }
+}
