@@ -1,0 +1,37 @@
+
+.app__form-field {
+    margin-bottom: var(--spacing-md);
+}
+
+.app__form-input_container {
+    background-color: var(--white);
+    border-radius: var(--br-1);
+}
+
+.app__form-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.85rem 1rem;
+    width: 100%;
+}
+
+.app__form-btn {
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: var(--br-1);
+    outline: none;
+    padding: 0.85rem 1rem;
+    width: 100%;
+}
+
+.app__form-btn, 
+.app__form-input {
+    font-family: inherit;
+    font-size: var(--input-tex);
+    font-weight: 400;
+}
+
+.app__form-error_text {
+    color: var(--danger);
+}

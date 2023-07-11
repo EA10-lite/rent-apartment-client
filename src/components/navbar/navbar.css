@@ -1,0 +1,377 @@
+.app__navbar {
+    width: 100%;
+    position: relative;
+    transition: all 0.3s;
+    top: 0;
+    z-index: 1009;
+}
+
+.app__navbar-content {
+    position: fixed;
+    /* top: 12px; */
+    left: 0;
+    right: 0;
+    z-index: 102;
+}
+
+.app__navbar-container {
+    padding: 0 25px;
+}
+.logo {
+    cursor: pointer;
+}
+
+.app__navbar-toggle_menu {
+    position: relative;
+    top: 2.5px;
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    outline: 0!important;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+    text-indent: inherit;
+    width: 24px;
+}
+
+.app__navbar-toggle_menu:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+}
+
+.app__navbar-toggle_menu span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 8px 0;
+    top: 0;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: var(--dark);
+    -webkit-transition: top ease-out .15s .15s,-webkit-transform ease-out .15s 0s;
+    transition: top ease-out .15s .15s,-webkit-transform ease-out .15s 0s;
+    -o-transition: top ease-out .15s .15s,-o-transform ease-out .15s 0s;
+    -moz-transition: top ease-out .15s .15s,transform ease-out .15s 0s,-moz-transform ease-out .15s 0s;
+    transition: top ease-out .15s .15s,transform ease-out .15s 0s;
+    transition: top ease-out .15s .15s,transform ease-out .15s 0s,-webkit-transform ease-out .15s 0s,-moz-transform ease-out .15s 0s,-o-transform ease-out .15s 0s;
+}
+
+.app__navbar.-open .app__navbar-toggle_menu span:first-child {
+    top: 6px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.app__navbar.-open .app__navbar-toggle_menu span:last-child {
+    top: -4px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.app__navbar-fill {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 102;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+   -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -ms-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center;
+    background: var(--white);
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.16,1,.3,1);
+    transition: -webkit-transform 1s cubic-bezier(.16,1,.3,1);
+    -o-transition: -o-transform 1s cubic-bezier(.16,1,.3,1);
+    -moz-transition: transform 1s cubic-bezier(.16,1,.3,1),-moz-transform 1s cubic-bezier(.16,1,.3,1);
+    transition: transform 1s cubic-bezier(.16,1,.3,1);
+    transition: transform 1s cubic-bezier(.16,1,.3,1),-webkit-transform 1s cubic-bezier(.16,1,.3,1),-moz-transform 1s cubic-bezier(.16,1,.3,1),-o-transform 1s cubic-bezier(.16,1,.3,1);  
+}
+
+.app__navbar.-open .app__navbar-fill {
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+
+.app__navbar-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 102;
+    height: 72px;
+    background-color: var(--white);
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    -o-transition: -o-transform .4s;
+    -moz-transition: transform .4s,-moz-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+}
+
+.app__navbar-navItem a {
+    color: var(--dark);
+    font-weight: 600;
+    opacity: 0.75;
+}
+.app__navbar-navItem a:hover {
+    opacity: 1;
+}
+
+.app__navbar-navItem a.-active {
+    color: var(--primary);
+    opacity: 1;
+}
+
+.app__navbar-btn.-outline-btn {
+    border: 1px solid var(--primary);
+}
+
+.app__navbar-btn.-outline-btn:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.app__navbar-btn.-thick-btn {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.app__navbar-btn {
+    border-radius: var(--br-0);
+    font-size: 16px;
+    min-width: 120px;
+    padding: 10px 24px;
+    text-align: center;
+    transition: all .25s ease-in-out;
+}
+
+@media screen and (min-width: 1100px) {
+    .app__navbar-fill {
+        display: none;
+    }
+
+    .app__navbar-bg {
+        height: 80px;
+    }
+
+    .app__navbar-content {
+        top: 24px;
+    }
+
+    .app__navbar-navItem span {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: inherit;
+    }
+
+    .app__navbar-toggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .app__navbar.-open .app__navbar-fill {
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        transform: scaleY(1);
+        pointer-events: auto;
+    }
+
+    .app__navbar.-open .app__navbar-nav {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        -webkit-transition-delay: 0s,0s;
+        -moz-transition-delay: 0s,0s;
+        -o-transition-delay: 0s,0s;
+        transition-delay: 0s,0s;
+        -webkit-transition-duration: 0s,0s;
+        -moz-transition-duration: 0s,0s;
+        -o-transition-duration: 0s,0s;
+        transition-duration: 0s,0s;
+    }
+
+    .app__navbar-nav {
+        position: fixed;
+        top: 65px;
+        left: 30px;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        color: #fff;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        -webkit-transition: opacity .3s 0s,visibility 0s .6s;
+        -o-transition: opacity .3s 0s,visibility 0s .6s;
+        -moz-transition: opacity .3s 0s,visibility 0s .6s;
+        transition: opacity .3s 0s,visibility 0s .6s;
+    }
+
+    .app__navbar-logo {
+        position: fixed;
+        top: 12px;
+        left: 25px;
+        z-index: 1000;
+    }
+
+    .app__navbar-navItem {
+        display: block;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .app__navbar-navItem span {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 110%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        -webkit-transition: opacity .1s linear,visibility 0s .1s;
+        -o-transition: opacity .1s linear,visibility 0s .1s;
+        -moz-transition: opacity .1s linear,visibility 0s .1s;
+        transition: opacity .1s linear,visibility 0s .1s;
+    
+    }
+
+    .app__navbar.-open .app__navbar-navItem span {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0) translateZ(0);
+        -moz-transform: translateY(0) translateZ(0);
+        transform: translateY(0) translateZ(0);
+    }
+
+    .app__navbar.-open .app__navbar-navItem:nth-child(1) span {
+        -webkit-transition-delay: .25s;
+        -moz-transition-delay: .25s;
+        -o-transition-delay: .25s;
+        transition-delay: .25s;
+    }
+
+    .app__navbar.-open .app__navbar-navItem:nth-child(2) span {
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        transition-delay: .3s;
+    }
+    .app__navbar.-open .app__navbar-navItem:nth-child(3) span {
+        -webkit-transition-delay: .35s;
+        -moz-transition-delay: .35s;
+        -o-transition-delay: .35s;
+        transition-delay: .35s;
+    }
+    .app__navbar.-open .app__navbar-navItem:nth-child(4) span {
+        -webkit-transition-delay: .4s;
+        -moz-transition-delay: .4s;
+        -o-transition-delay: .4s;
+        transition-delay: .4s;
+    }
+    .app__navbar.-open .app__navbar-navItem:nth-child(5) span {
+        -webkit-transition-delay: .45s;
+        -moz-transition-delay: .45s;
+        -o-transition-delay: .45s;
+        transition-delay: .45s;
+    }
+    .app__navbar.-open .app__navbar-navItem:nth-child(6) span {
+        -webkit-transition-delay: .5s;
+        -moz-transition-delay: .5s;
+        -o-transition-delay: .5s;
+        transition-delay: .5s;
+    }
+    .app__navbar.-open .app__navbar-navItem:nth-child(7) span {
+        -webkit-transition-delay: .55s;
+        -moz-transition-delay: .55s;
+        -o-transition-delay: .55s;
+        transition-delay: .55s;
+    }
+    .app__navbar.-open .app__navbar-navItem:nth-child(8) span {
+        -webkit-transition-delay: .6s;
+        -moz-transition-delay: .6s;
+        -o-transition-delay: .6s;
+        transition-delay: .6s;
+    }
+
+    .app__navbar-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        z-index: 1000;
+        pointer-events: auto;
+        -webkit-transition: -webkit-transform .4s;
+        transition: -webkit-transform .4s;
+        -o-transition: -o-transform .4s;
+        -moz-transition: transform .4s,-moz-transform .4s;
+        transition: transform .4s;
+        transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    }
+
+    .app__navbar-btns {
+        position: fixed;
+        left: 30px;
+        bottom: 50px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        -webkit-transition: opacity .1s linear,visibility 0s .1s;
+        -o-transition: opacity .1s linear,visibility 0s .1s;
+        -moz-transition: opacity .1s linear,visibility 0s .1s;
+        transition: opacity .1s linear,visibility 0s .1s;
+    }
+
+    .app__navbar.-open .app__navbar-btns {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+        pointer-events: initial;
+    }
+}

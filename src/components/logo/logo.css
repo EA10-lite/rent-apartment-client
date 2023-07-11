@@ -1,0 +1,14 @@
+
+.app__logo svg {
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.app__logo h4 {
+    line-height: 100%;
+    color: var(--dark);
+}
+
+.app__logo h4 span {
+    color: var(--primary);
+}

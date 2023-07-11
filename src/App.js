@@ -1,4 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import "./App.css";
 
 // containers
 import AuthLayout from "./containers/auth/AuthLayout";
@@ -28,7 +29,7 @@ import TermsAndConditions from "./routes/terms-conditions/terms-conditions";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App p-relative w-100 h-100">
      <BrowserRouter>
       <Routes>
         <Route path="" element={<MainLayout />}>

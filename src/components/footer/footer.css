@@ -1,0 +1,80 @@
+.app__footer {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.app__footer-container {
+    padding: 6rem 2rem;
+}
+
+.app__footer-logo {
+    margin-bottom: var(--spacing-sm);
+}
+
+.app__footer .app__logo svg {
+    color: var(--white);
+}
+
+.app__footer .app__logo h4 span {
+    color: var(--white);
+}
+
+.app__footer .-socials {
+    margin-top: var(--spacing-md);
+}
+
+.-socials svg {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.app__footer-row.-grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xxl);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.app__footer-col.-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.app__footer .-header-text {
+    color: lightgray;
+    margin-bottom: var(--spacing-md);
+}
+
+.app__footer-link {
+    margin-bottom: var(--spacing-sm);
+}
+
+.app__footer-link a, .app__footer p{
+    color: var(--white);
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .app__footer-row.-grid_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 824px) {
+    .app__footer-row.-grid_container {
+        grid-template-columns: repeat(1,1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .app__footer-container {
+        padding: 3rem 1.5rem;
+    }
+
+    .app__footer-col.-center {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
